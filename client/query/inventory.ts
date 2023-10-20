@@ -4,7 +4,7 @@ export default async function queryInventory(address: string) {
   let tokenList = [];
 
   tokenList = await fetch(
-    `${NFT_API}/api/pegasus/profile/${address}/paginated_nfts`
+    `${NFT_API}/api/pegasus/profile/${address}/paginated_nfts?limit=1000`
   ).then((res) => {
     return res.json();
   });
