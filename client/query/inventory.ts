@@ -10,7 +10,7 @@ export default async function queryInventory(address: string) {
   );
 
   // sort by nft name
-  tokenList.sort((a: any, b: any) =>
+  tokenList.tokens.sort((a: any, b: any) =>
     a.name.localeCompare(b.name, undefined, { numeric: true })
   );
 
